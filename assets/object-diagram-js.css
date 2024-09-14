@@ -1,0 +1,130 @@
+@import "~diagram-js/assets/diagram-js.css";
+@import "~bpmn-font/dist/css/bpmn.css";
+@import url("./css/od.css");
+
+@font-face {
+  font-family: "Font Awesome 5 Free Solid";
+  src: url("./font-awesome-5/fa.eot"); /* IE9*/
+  src:
+    url("./font-awesome-5/fa.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./font-awesome-5/fa.woff2") format("woff2"),
+    /* chrome、firefox */ url("./font-awesome-5/fa.woff") format("woff"),
+    /* chrome、firefox */ url("./font-awesome-5/fa.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("./font-awesome-5/fa.svg#Font Awesome 5 Free Solid") format("svg"); /* iOS 4.1- */
+}
+
+/* OVERWRITING Diagram.js */
+.djs-palette {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+/* General */
+button {
+  border: none;
+  background: none;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+.ojs-buttons {
+  position: fixed;
+}
+
+.ojs-buttons > div {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+}
+
+.ojs-buttons > div > div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ojs-buttons > div > div > a,
+.ojs-buttons button {
+  color: black;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border: solid 1px #cdcdcd;
+}
+
+.ojs-buttons a {
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+.ojs-buttons a.ojs-buttons-active,
+.ojs-buttons button.ojs-buttons-active {
+  opacity: 1;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* canvas drawing */
+
+.ojs-text-box:before {
+  content: "Abc";
+  font-size: medium;
+}
+
+.ojs-horizontal {
+  display: inline-block;
+}
+
+.ojs-horizontal div {
+  float: left;
+}
+
+[class*=" ojs-general-icon"]::before {
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.ojs-general-icon {
+  font-family: "Font Awesome 5 Free Solid", serif;
+  line-height: 1.2em;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.ojs-io-dialog.ojs-io-dialog-open::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #666;
+  opacity: 0.2;
+  z-index: 1001;
+}
+
+.ojs-io-dialog-content {
+  background: white;
+  z-index: 1001;
+  position: fixed;
+  width: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  padding: 10px 30px 20px 30px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  height: auto;
+}
